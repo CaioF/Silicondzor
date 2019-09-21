@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from './components/form';
+import GraphLabel from './components/graphlabel';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <li><Link to="/info">INFO</Link></li>
         </ul>
         <header className="App-header">
-          <img src={"logo-big.png"} alt="logo" />
+          <img className="logo-header" src={"logo-big.jpg"} alt="logo" />
         </header>
 
         <hr />
@@ -27,8 +28,9 @@ function App() {
 
 function Home() {
   return (
-    <div>
+    <div className="home_container">
       <Form />
+      <GraphLabel />
     </div>
   );
 }
