@@ -12,7 +12,7 @@ function App() {
         <ul>
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/info">INFO</Link></li>
-          <li><Link to="/info">Analytic</Link></li>
+          <li><Link to="/analytic">Analytic</Link></li>
         </ul>
         <header className="App-header">
           <img className="logo-header" src={"logo-big.jpg"} alt="logo" />
