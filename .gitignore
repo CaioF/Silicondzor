@@ -1,3 +1,5 @@
 /jupyter_notebooks/.ipynb_checkpoints
+*.DS_Store*
+/jupyter_notebooks/.ipynb
 # dependencies
 /app-sillicondzor/node_modules
