@@ -24,7 +24,7 @@ class CustomLabel extends Component {
 CustomLabel.defaultEvents = VictoryTooltip.defaultEvents;
 
 
-export default class GraphLabel extends React.Component {
+export default class GraphLabel extends Component {
   render() {
     return (
       <div className="container-sillicon">

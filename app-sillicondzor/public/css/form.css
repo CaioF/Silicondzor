@@ -134,9 +134,8 @@ iframe {
 }
 
 .container-sillicon-big {
-  width: 50%;
+  width: 100%;
   min-height: 50vh;
-	height: 70vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
