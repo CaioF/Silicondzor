@@ -1,11 +1,11 @@
 {
-  "short_name": "Shards Dashboard Lite React",
-  "name": "Shards Dashboard Lite React",
+  "short_name": "КП-Система",
+  "name": "Cистема для автоматизации создания КП",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "logo-s.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",

@@ -1,31 +1,44 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Form from './components/form';
 
-import routes from "./routes";
-import withTracker from "./withTracker";
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <ul>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/info">INFO</Link></li>
+        </ul>
+        <header className="App-header">
+          <img src={"logo-big.png"} alt="logo" />
+        </header>
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./dashboard/dashboards.1.1.0.min.css";
+        <hr />
 
-export default () => (
-  <Router basename={process.env.REACT_APP_BASENAME || ""}>
+        <Route exact path="/" component={Home} />
+        <Route path="/info" component={Info} />
+      </div>
+    </Router>
+  );
+}
+
+
+function Home() {
+  return (
     <div>
-      {routes.map((route, index) => {
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={withTracker(props => {
-              return (
-                <route.layout {...props}>
-                  <route.component {...props} />
-                </route.layout>
-              );
-            })}
-          />
-        );
-      })}
+      <Form />
     </div>
-  </Router>
-);
+  );
+}
+
+function Info() {
+  return (
+    <div>
+      <h2>Info</h2>
+    </div>
+  );
+}
+
+export default App;
