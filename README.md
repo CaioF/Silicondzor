@@ -5,11 +5,11 @@
 ## Участники
 
 * **Caio Fleury** - [@CaioF](https://github.com/CaioF)
-* **Davit Meliksetyan**
-* **Павел Добрачёв**
-* **Albina Zamaletdinova**
-* **Надежда Басаргина**
- 
+* **Davit Meliksetyan** -
+* **Павел Добрачёв** -
+* **Albina Zamaletdinova** -
+* **Надежда Басаргина** - 
+ * **Mihail Selezniov** - 
 ## License
 
 This project is licensed under the GNU General Public License v3.0
