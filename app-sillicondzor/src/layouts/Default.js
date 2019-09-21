@@ -17,9 +17,9 @@ const DefaultLayout = ({ children, noNavbar, noFooter }) => (
         sm="12"
         tag="main"
       >
-        {!noNavbar && <MainNavbar />}
+        {noNavbar && <MainNavbar />}
         {children}
-        {!noFooter && <MainFooter />}
+        {noFooter && <MainFooter />}
       </Col>
     </Row>
   </Container>
