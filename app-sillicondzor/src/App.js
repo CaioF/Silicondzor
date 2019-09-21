@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Form from './components/form';
 import GraphLabel from './components/graphlabel';
+import AnalysisMap from './components/analysismap';
 
 function App() {
   return (
@@ -41,6 +42,15 @@ function Info() {
   return (
     <div>
       <h2>Info</h2>
+    </div>
+  );
+}
+
+
+function Analytic() {
+  return (
+    <div>
+      <AnalysisMap />
     </div>
   );
 }
