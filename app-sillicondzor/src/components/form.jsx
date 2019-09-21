@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Form extends Component {
 
   handleClick(event) {
-    setTimeout(function(){  window.location='http://10.55.130.239:3000/send' }, 700);
+    setTimeout(function(){  window.location='http://10.55.130.239:3000/analytic' }, 700);
   }
 
   render() {

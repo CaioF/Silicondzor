@@ -11,6 +11,7 @@ function App() {
         <ul>
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/info">INFO</Link></li>
+          <li><Link to="/info">Analytic</Link></li>
         </ul>
         <header className="App-header">
           <img className="logo-header" src={"logo-big.jpg"} alt="logo" />
@@ -20,6 +21,7 @@ function App() {
 
         <Route exact path="/" component={Home} />
         <Route path="/info" component={Info} />
+        <Route path="/analytic" component={Analytic} />
       </div>
     </Router>
   );
