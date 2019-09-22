@@ -1,0 +1,76 @@
+table.DTFC_Cloned tr {
+    background-color: #008cba;
+    margin-bottom: 0;
+    border-top: none;
+}
+
+div.DTFC_LeftHeadWrapper table,
+div.DTFC_RightHeadWrapper table {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+}
+
+div.DTFC_LeftBodyWrapper table,
+div.DTFC_RightBodyWrapper table {
+    border-top: none;
+    margin: 0 !important;
+}
+
+div.DTFC_LeftFootWrapper table,
+div.DTFC_RightFootWrapper table {
+    border-top: none;
+    margin-top: 0 !important;
+}
+
+table.dataTable thead tr {
+    background-color: #008cba;
+}
+
+table tbody tr:nth-child(4) {
+    background-color: #5fbeaa;
+}
+
+table tbody tr:nth-child(2) {
+    background-color: #5fbeaa;
+}
+
+table tbody tr:nth-child(6) {
+    background-color: #5fbeaa;
+}
+
+table tbody tr:nth-child(8) {
+    background-color: #5fbeaa;
+}
+
+table tbody tr:nth-child(10) {
+    background-color: #5fbeaa;
+}
+
+table tbody tr:nth-child(12) {
+    background-color: #5fbeaa;
+}
+
+table tbody td:nth-child(2) {
+    background-color: #5fbeaa;
+}
+
+table tbody th:nth-child(2) {
+    background-color: #5fbeaa;
+}
+
+div.slider {
+    display: none;
+}
+
+td.details-control {
+    background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('https://datatables.net/examples/resources/details_close.png') no-repeat center center;
+}
+
+tr.shown {
+    background-color: #f7897b !important;
+}
