@@ -34,19 +34,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(getData);
-      function getData() {
-        jQuery.ajax({
-            url: "http://localhost:8008/well-data",
-            type: "GET",
-            dataType: "json",
-            async: false,
-            success: function (data) {
-                console.log(data);
-                drawChart(data);
-            }
-        });
-      };
+      google.charts.setOnLoadCallback(drawChart);
 
       function drawChart(data) {
         var data = google.visualization.arrayToDataTable([
