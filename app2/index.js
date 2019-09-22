@@ -14,10 +14,13 @@ app.get('/analysis', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'analysis.html'));
 });
 
-app.get('/browsewells', function(req, res) {
-  res.sendFile(path.join(__dirname, '', 'browsewells.html'));
+app.get('/wells', function(req, res) {
+  res.sendFile(path.join(__dirname, '', 'wells.html'));
 });
 
+app.get('/well-data', function(req, res) {
+    res.sendFile(path.join(__dirname, 'json', 'result_total_example.json'));
+});
 
 app.listen(8008);
 console.log("Server is running on port 8008, set to your local IP");
