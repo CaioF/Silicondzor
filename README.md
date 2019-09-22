@@ -27,4 +27,4 @@ This project is licensed under the GNU General Public License v3.0
 
 * cd app2
 * npm install
-* nodemon ./index.js
+* npx nodemon
