@@ -32,8 +32,6 @@ function App() {
 function Home() {
   return (
     <div className="home_container">
-      <Form />
-      <GraphLabel />
     </div>
   );
 }
@@ -41,7 +39,6 @@ function Home() {
 function Info() {
   return (
     <div>
-      <h2>Info</h2>
     </div>
   );
 }
