@@ -6653,6 +6653,10 @@ button.bg-dark:focus {
 .my-5 {
   margin-bottom: 3rem !important; }
 
+.mb-5 {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 100px !important; }
+
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important; }
@@ -8355,14 +8359,14 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: .8;
     background: #000000;
-    background: #207dff;
-    background: -moz-linear-gradient(left, #207dff 0%, #a16ae8 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #207dff), color-stop(100%, #a16ae8));
-    background: -webkit-linear-gradient(left, #207dff 0%, #a16ae8 100%);
-    background: -o-linear-gradient(left, #207dff 0%, #a16ae8 100%);
-    background: -ms-linear-gradient(left, #207dff 0%, #a16ae8 100%);
-    background: -webkit-gradient(linear, left top, right top, from(#207dff), to(#a16ae8));
-    background: linear-gradient(to right, #207dff 0%, #a16ae8 100%);
+    background: #020b17;
+    background: -moz-linear-gradient(left, #020b17 0%, #261938 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #020b17), color-stop(100%, #261938));
+    background: -webkit-linear-gradient(left, #020b17 0%, #261938 100%);
+    background: -o-linear-gradient(left, #020b17 0%, #261938 100%);
+    background: -ms-linear-gradient(left, #020b17 0%, #261938 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#020b17), to(#261938));
+    background: linear-gradient(to right, #020b17 0%, #261938 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207dff', endColorstr='#a16ae8', GradientType=1 ); }
   .hero-wrap .slider-text {
     height: 800px;
