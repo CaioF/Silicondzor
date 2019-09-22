@@ -18,6 +18,10 @@ app.get('/wells', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'wells.html'));
 });
 
+app.get('/wellss', function(req, res) {
+  res.sendFile(path.join(__dirname, '', 'wellss.html'));
+});
+
 app.get('/well-data', function(req, res) {
 
     res.sendFile(path.join(__dirname, 'json', 'wells.json'));
