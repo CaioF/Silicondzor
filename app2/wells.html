@@ -37,15 +37,15 @@
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart(data) {
+      function drawChart() {
         var data = google.visualization.arrayToDataTable([
-       ['Well ID',  '500-1000', '1000-1500', '1500-2000', '2000-2500', '2500-3000'],
-       ['47', 0, 0, 0, 19035, 44885],
-       ['95', 0, 0, 0, 0, 113905],
-       ['126', 90216, 715680, 713916, 584136, 117810],
-       ['164', 133332, 941032, 943492, 645176, 0],
-       ['176', 0, 0, 0, 206624, 0]
-               ]);
+        ['Well ID',  '500-1000', '1000-1500', '1500-2000', '2000-2500', '2500-3000'],
+        ['47', 0, 0, 0, 133, 190],
+        ['95', 0, 0, 0, 0, 170],
+        ['126', 174, 1328, 1100, 81, 74],
+        ['164', 6, 1622, 1155, 405, 0],
+        ['176', 0, 0, 0, 208, 0],
+                ]);
 
         var options_fullStacked = {
           isStacked: 'true',
@@ -77,7 +77,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="wells.html" class="nav-link">Well Manager</a></li>
-	          <li class="nav-item"><a href="analysis.html" class="nav-link">Economical Analysis</a></li>
+	          <li class="nav-item"><a href="analysis.html" class="nav-link">Deep Analysis</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -90,7 +90,7 @@
         <div class="row no-gutters slider-text align-items-end justify-content-start">
           <div class="col-md-12 ftco-animate text-center mb-5">
           	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Wells</span></p>
-            <h1 class="mb-3 bread">Well Manager</h1>
+            <h1 class="mb-3 bread">Well(come) Manager</h1>
           </div>
         </div>
       </div>
