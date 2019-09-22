@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #757575;
+}
+.layout {
+  display: flex;
+  background: #f6fbfe;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 15px -6px #363636;
+}
+section.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 95px;
+  background: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+}
+section.sidebar .nav {
+  background: #0291ff;
+  color: #ffffff;
+  padding: 30px 0;
+}
+section.sidebar ul.menu {
+  list-style: none;
+}
+section.sidebar ul.menu .menu-item {
+  color: #d5d7de;
+  border-left: 3px solid transparent;
+  padding: 30px 0;
+  margin: 1px 0;
+  transition: all 0.2s ease-in-out;
+}
+section.sidebar ul.menu .menu-item a {
+  text-decoration: none;
+  color: inherit;
+}
+section.sidebar ul.menu .menu-item.selected, section.sidebar ul.menu .menu-item:hover {
+  border-left-color: #0291ff;
+  color: #0291ff;
+  font-weight: 600;
+  background: linear-gradient(to right, #ceeaff 0%, #ffffff 100%);
+  cursor: auto;
+}
+section.sidebar ul.menu .menu-item:hover {
+  cursor: pointer;
+}
+section.sidebar .expander {
+  margin-top: auto;
+  border-top: 2px solid #f2f2f4;
+  color: #0291ff;
+  padding: 30px 0;
+}
+section.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+div.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  color: #939698;
+  padding: 17.1428571429px 30px;
+}
+div.topbar .search {
+  display: flex;
+  font-size: 1.2em;
+}
+div.topbar .search input[type="text"] {
+  outline: none;
+  border: none;
+  color: #939698;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1.2em;
+  padding: 0 15px;
+}
+div.topbar .selected-app {
+  background: #f1f6fe;
+  padding: 15px;
+  border-radius: 5px;
+  color: #0291ff;
+  font-weight: 600;
+}
+div.topbar .selected-app i {
+  margin: 0 5px;
+}
+div.topbar .user-options {
+  display: flex;
+  align-items: center;
+}
+div.topbar .user-options i {
+  display: inline-block;
+  margin: 0 15px;
+}
+div.topbar .user-options .user {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #939698;
+  margin-left: 15px;
+  padding-left: 30px;
+}
+div.topbar .user-options .user span {
+  font-size: 0.75em;
+  color: #42484a;
+  margin: 0 10px;
+}
+div.topbar .user-options .user img.user-img {
+  border-radius: 50%;
+}
+section.main {
+  display: flex;
+  flex-direction: column;
+}
+section.main header.app-header {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 60px 45px 0 60px;
+  border-bottom: 2px solid #f2f2f4;
+}
+section.main header.app-header h1.title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #42484a;
+  margin-bottom: 45px;
+}
+nav.app-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+nav.app-nav ul.menu {
+  display: flex;
+  list-style: none;
+}
+nav.app-nav ul.menu li {
+  margin-right: 45px;
+  position: relative;
+}
+nav.app-nav ul.menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75em;
+  color: #939698;
+}
+nav.app-nav ul.menu li.selected a, nav.app-nav ul.menu li:hover a, nav.app-nav ul.menu li.selected i, nav.app-nav ul.menu li:hover i {
+  color: #0291ff;
+}
+nav.app-nav ul.menu li.selected ::before, nav.app-nav ul.menu li:hover ::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  bottom: -12.5px;
+  border-top: 4px solid #0291ff;
+  height: 1px;
+}
+nav.app-nav div.app-options {
+  display: flex;
+}
+nav.app-nav div.app-options .btn {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 25px;
+  background: #ffffff;
+  margin-left: 15px;
+  margin-righ: 0;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+nav.app-nav div.app-options .btn .status {
+  height: 8px;
+  width: 8px;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ffbc35;
+}
+nav.app-nav div.app-options .btn i {
+  margin-left: 10px;
+}
+nav.app-nav div.app-options .btn.addnew {
+  background: #0291ff;
+  color: #ffffff;
+}
+.main .app-content {
+  display: flex;
+  padding: 60px;
+}
+.main .app-content .panel {
+  background: #ffffff;
+  border: 1px solid #d5d7de;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.main .app-content .panel header {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.main .app-content .panel header h2 {
+  font-weight: 600;
+  color: #42484a;
+}
+.main .app-content .activity {
+  width: 80%;
+}
+.main .app-content .activity header .legends {
+  display: flex;
+  font-size: 1em;
+  color: #939698;
+  font-weight: 600;
+}
+.main .app-content .activity header .legends .legend {
+  margin: 0 30px;
+  position: relative;
+}
+.main .app-content .activity header .legends .legend .status {
+  height: 12px;
+  width: 12px;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ffbc35;
+}
+.main .app-content .activity header .legends .legend .status.good {
+  background: #0291ff;
+}
+.main .app-content .activity header .legends .legend:last-child::before {
+  content: "";
+  position: relative;
+  height: 30px;
+  border-left: 1px solid #d5d7de;
+  left: -30px;
+  top: -6px;
+}
+.main .app-content .activity .barchart {
+  padding: 30px;
+  padding-top: 0;
+}
+.main .app-content .tasks {
+  margin-left: 45px;
+  width: 50%;
+}
+.main .app-content .tasks header .options {
+  color: #939698;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+.main .app-content .tasks header .options i {
+  margin-left: 7.5px;
+}
+.statusblock {
+  display: flex;
+  margin-top: 45px;
+}
+.statusblock .block {
+  background: #ffffff;
+  border: 1px solid #d5d7de;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #939698;
+  text-transform: uppercase;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+.statusblock .block i.icon {
+  padding: 30px 45px;
+  display: inline-block;
+  color: #0291ff;
+  font-size: 1.5em;
+}
+.statusblock .block .status {
+  border-left: 1px solid #d5d7de;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 30px;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+.statusblock .block .status .desc {
+  margin-right: 30px;
+}
+.statusblock .block .status .desc h3 {
+  color: #42484a;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.statusblock .block .status .circular {
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.statusblock .block .status .circular .dot {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  display: inline-block;
+  background: #0291ff;
+  border-radius: 0;
+  top: 35%;
+  left: 36%;
+}
+.statusblock .block .status .circular .dot.complete {
+  background: #ffbc35;
+}
+.statusblock .block:last-child {
+  margin-left: 45px;
+}
+.tasks.panel .content {
+  border-top: 1px solid #d5d7de;
+  display: flex;
+  flex-direction: column;
+}
+.tasks.panel .content > .overall-status {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: #939698;
+  font-weight: 600;
+}
+.tasks.panel .content ul.status-list {
+  list-style: none;
+  flex-grow: 1;
+  padding-right: 30px;
+}
+.tasks.panel .content ul.status-list li {
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+  align-items: center;
+}
+.tasks.panel .content ul.status-list li .dot {
+  border: 3px solid #939698;
+  margin-right: 15px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.tasks.panel .content ul.status-list li .dot.inprogress {
+  border-color: #0291ff;
+}
+.tasks.panel .content ul.status-list li .dot.complete {
+  border-color: #ffbc35;
+}
+.tasks.panel .content ul.status-list li .count {
+  color: #adafb1;
+  margin-left: auto;
+}
+.tasks.panel .content > .overall-status > .progress {
+  flex-grow: 1;
+  margin-left: 30px;
+  position: relative;
+}
+.tasks.panel .content > .overall-status > .progress .complete {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+}
+.tasks.panel .content > .managers {
+  border-top: 1px solid #d5d7de;
+}
+.tasks.panel .content > .managers header .icon {
+  color: #939698;
+  font-weight: 600;
+}
+.tasks.panel .content > .managers ul.list {
+  padding: 30px;
+  padding-top: 0;
+  list-style: none;
+}
+.tasks.panel .content > .managers ul.list li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+  color: #939698;
+  font-size: 0.75em;
+}
+.tasks.panel .content > .managers ul.list li .user-img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.tasks.panel .content > .managers ul.list li .text h4.name {
+  color: #42484a;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 7.5px;
+}
+.tasks.panel .content > .managers ul.list li .status {
+  text-transform: uppercase;
+  margin-left: auto;
+}
+.tasks.panel .content > .seemore {
+  margin-top: auto;
+  border: 1px dashed #d5d7de;
+  margin: 30px;
+  padding: 15px 30px;
+  text-align: center;
+  color: #0291ff;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.tasks.panel .content > .seemore:hover {
+  border-color: #0291ff;
+  cursor: pointer;
+}

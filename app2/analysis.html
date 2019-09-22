@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Oily</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./images/logo-s.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="description"
+      content="Oily is a machine-learning powered platform for business managers in order to improve the rentability of oil mining"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analysis.css">
+    <!--============================================================-->
+    <!--============================================================-->
+  </head>
+  <body>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container-fluid px-md-4	">
+	      <a class="navbar-brand" href="index.html">Oily</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="wells.html" class="nav-link">Well Manager</a></li>
+	          <li class="nav-item"><a href="analysis.html" class="nav-link">Deep Analysis</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Wells</span></p>
+            <h1 class="mb-3 bread">Deep Analysis</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card-box table-responsive">
+                <h4 class="m-t-0 header-title"></h4>
+                <p class="text-muted font-14 m-b-30">
+
+                </p>
+
+
+
+                <table id="selection-datatable"    class="table table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>well-id</th>
+                            <th>depth-m</th>
+                            <th>bk</th>
+                            <th>GZ1</th>
+                            <th>GZ2</th>
+                            <th>GZ3</th>
+                            <th>GZ4</th>
+                            <th>GZ5</th>
+                            <th>GZ7</th>
+                            <th>DGK</th>
+                            <th>NKTD</th>
+                            <th>NKTM</th>
+                            <th>NKTR</th>
+                            <th>ALPS</th>
+                            <th>lith</th>
+                            <th>goal</th>
+                            <th>expenses</th>
+
+
+
+
+
+                        </tr>
+                    </thead>
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        var results = [];
+        var categories = ['well-id', 'depth-m', 'bk', 'GZ1', 'GZ2', 'GZ3', 'GZ4', 'GZ5', 'GZ7', 'DGK', 'NKTD', 'NKTM', 'NKTR', 'ALPS', 'lith', 'goal', 'expenses'];
+        var jqxhr = $.getJSON('http://localhost:8008/get-data', function() {
+                console.log("success");
+            })
+            .done(function(data) {
+                console.log("second success");
+                console.log(data);
+                var entry = data.entry;
+                var rowCount = 0; //row counter
+                var rowData = []; //data array for each row
+                console.log(entry);
+                $(entry).each(function() {
+
+                    if (rowCount % 2 === 0) {
+                        // if rowCount mod 2 is 0 then start new row data
+                        rowData = [
+                          this.gsx$_cn6ca.$t,
+                          this.gsx$well-id.$t,
+                          this.gsx$depth-m.$t,
+                          this.gsx$bk.$t,
+                          this.gsx$GZ1.$t,
+                          this.gsx$GZ2.$t,
+                          this.gsx$GZ3.$t,
+                          this.gsx$GZ4.$t,
+                          this.gsx$GZ5.$t,
+                          this.gsx$GZ7.$t,
+                          this.gsx$DGK.$t,
+                          this.gsx$NKTD.$t,
+                          this.gsx$NKTM.$t,
+                          this.gsx$NKTR.$t,
+                          this.gsx$ALPS.$t,
+                          this.gsx$lith.$t,
+                          this.gsx$goal.$t,
+                          this.gsx$expenses.$t
+
+                        ];
+                    } else {
+                        // Otherwise append second row to the first
+
+                        rowData = rowData.concat([
+                          this.gsx$_cn6ca.$t,
+                          this.gsx$well-id.$t,
+                          this.gsx$depth-m.$t,
+                          this.gsx$bk.$t,
+                          this.gsx$GZ1.$t,
+                          this.gsx$GZ2.$t,
+                          this.gsx$GZ3.$t,
+                          this.gsx$GZ4.$t,
+                          this.gsx$GZ5.$t,
+                          this.gsx$GZ7.$t,
+                          this.gsx$DGK.$t,
+                          this.gsx$NKTD.$t,
+                          this.gsx$NKTM.$t,
+                          this.gsx$NKTR.$t,
+                          this.gsx$ALPS.$t,
+                          this.gsx$lith.$t,
+                          this.gsx$goal.$t,
+                          this.gsx$expenses.$t
+
+                        ])
+
+                        // and push onto the row data
+                        results.push(rowData);
+                    }
+                    rowCount++;
+                });
+                var table = $('#selection-datatable').DataTable({
+                    data: results,
+                    deferRender: true,
+                    "processing": true,
+                    paging: false,
+
+
+
+                    columnDefs: [{
+                        className: "details-control",
+                        "targets": [0]
+                    }]
+                });
+
+
+
+                function format(title) {
+                    return '<div class="slider" name>' +
+                        '<table class=table  table hover     border="0"     class="details-table">' +
+                        '<thead> ' +
+                        '<td>' + [title[14]].join(', ') + '</td>' +
+                        '<td>' + [title[15]].join(', ') + '</td>' +
+                        '<td>' + [title[16]].join(', ') + '</td>' +
+                        '<td>' + [title[17]].join(', ') + '</td>' +
+                        '<td>' + [title[18]].join(', ') + '</td>' +
+                        '<td>' + [title[19]].join(', ') + '</td>' +
+                        '<td>' + [title[20]].join(', ') + '</td>' +
+                        '<td>' + [title[21]].join(', ') + '</td>' +
+                        '<td>' + [title[22]].join(', ') + '</td>' +
+                        '<td>' + [title[23]].join(', ') + '</td>' +
+                        '<td>' + [title[24]].join(', ') + '</td>' +
+                        '<td>' + [title[25]].join(', ') + '</td>' +
+                        '<td>' + [title[26]].join(', ') + '</td>' +
+                        '<td>' + [title[27]].join(', ') + '</td>' +
+                        '<td>' + [title[28]].join(', ') + '</td>' +
+                        '<td>' + [title[29]].join(', ') + '</td>' +
+                        '<td>' + [title[30]].join(', ') + '</td>' +
+                        '<td>' + [title[31]].join(', ') + '</td>' +
+                        '<td>' + [title[32]].join(', ') + '</td>' +
+                        '<td>' + [title[33]].join(', ') + '</td>' +
+                        '<td>' + [title[34]].join(', ') + '</td>' +
+                        '<td>' + [title[35]].join(', ') + '</td>' +
+
+                        '</thead> ' +
+
+                        '<div id="chart' + title[14] + '"></div>' +
+                        '</div>'
+                }
+
+
+
+                $('#selection-datatable tbody').on('click', 'td.details-control', function() {
+                    var tr = $(this).closest('tr');
+                    var row = table.row(tr);
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it
+                        $('div.slider', row.child()).slideUp(function() {
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        });
+                    } else {
+                        // Open this row
+                        row.child(format(row.data()), 'no-padding').show();
+                        tr.addClass('shown');
+                        createChart('chart' + row.data()[14], row.data().slice(16));
+                        $('div.slider', row.child()).slideDown();
+                    }
+                });
+
+
+            });
+
+
+      function createChart(container, data) {
+
+        Highcharts.chart(container, {
+
+
+
+
+
+
+                series: [{
+
+          data: (function() {
+                        data.forEach(function(el, i) {
+                            data[i] = Number(el);
+
+                        });
+
+
+                        return data;
+
+                    })()
+
+                }],
+
+
+               chart: {
+            zoomType: 'xy',
+            type: 'area',
+             backgroundColor: '#253138',
+           },
+
+        plotOptions: {
+            series: { neWidth: 2, fillColor: "#0099cc", lineColor: "#f7897b",
+                marker: { enabled: true, symbol: 'circle',  radius: 4,
+                    states: {  hover: { enabled: true, illColor: '#000000' } } }
+            }  },
+        title: { style: {  color: '#E0E0E3',  fontSize: '20px' } },
+
+      yAxis: {  labels: {  style: { color: 'white' } }},
+        legend: { itemStyle: {  color: 'white'  },  },
+
+
+
+                xAxis: {
+                    categories: categories,
+      labels: { style: {  color: 'white' } }
+                },
+
+
+            })
+        }
+
+      });
+  </script>
+
+  </body>
+</html>
