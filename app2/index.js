@@ -19,7 +19,7 @@ app.get('/wells', function(req, res) {
 });
 
 app.get('/well-data', function(req, res) {
-    res.sendFile(path.join(__dirname, 'json', 'result_total_example.json'));
+    res.sendFile(path.join(__dirname, 'json', 'wells.json'));
 });
 
 app.listen(8008);

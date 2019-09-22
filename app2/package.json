@@ -12,5 +12,7 @@
     "express": "^4.17.1",
     "nodemon": "^1.19.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery-csv": "^1.0.5"
+  }
 }
