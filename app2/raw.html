@@ -35,7 +35,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(getData);
+      function getData() {
+        jQuery.ajax({
+            url: "http://localhost:8008/well-data",
+            type: "GET",
+            dataType: "json",
+            async: false,
+            success: function (data) {
+                console.log(data);
+                drawChart(data);
+            }
+        });
+      };
 
       function drawChart(data) {
         var data = google.visualization.arrayToDataTable([
@@ -110,85 +122,81 @@
 				<h1 class="title"> Oily Manager Dashboard </h1>
 				<nav class="app-nav">
 					<ul class="menu">
-						<li class="selected"> <a> Reservoir Overview </a> </li>
+						<li> <a href="http://localhost:8008/wells.html"> Reservoir Overview </a> </li>
 						<li> <a href="http://localhost:8008/wellss.html"> Financial Overview </a> </li>
-						<li> <a href="http://localhost:8008/raw.html"> Raw Predictions </a> </li>
+						<li class="selected"> <a> Raw Predictions </a> </li>
 					</ul>
 				</nav>
 			</header>
 
 			<!-- App Main Content --->
 			<div class="app-content">
-				<div class="content" style="width: 70%;">
-					<div class="activity panel" style="width: 100%;">
-						<header>
-							<h2> Reservoir Overview </h2>
-						</header>
-						<div class="barchart">
-							<div id="chart_div"></div>
-						</div>
-					</div>
-
-					<div class="statusblock">
-						<div class="block complete">
-							<i class="fa fa-file icon"> </i>
-							<div class="status">
-								<div class="desc">
-									<h3> 660,400.00 USD </h3>
-									<h4> Complete </h4>
-								</div>
-								<h4> 50% </h4>
-								<div class="circular" id="completeStatus"> <span class="dot complete"> </span> </div>
-							</div>
-						</div>
-						<!--- Complete progress block -->
-					</div>
-				</div>
-
-				<!-- Tasks Panel -->
-				<div class="tasks panel">
-					<header>
-						<h2> Tasks </h2>
-
-						<div class="options">
-							<label> This Month </label>
-							<i class="fa fa-angle-down"> </i>
-						</div>
-					</header>
-
-					<!-- Tasks content -->
-					<div class="content">
-
-						<div class="overall-status">
-							<ul class="status-list">
-								<li>
-									<span class="dot total"> </span>
-									<label> Total </label>
-									<h4 class="count"> 120 </h4>
-								</li>
-
-								<li>
-									<span class="dot inprogress"> </span>
-									<label> In progress</label>
-									<h4 class="count"> 80 </h4>
-								</li>
-
-								<li>
-									<span class="dot complete"> </span>
-									<label> Complete </label>
-									<h4 class="count"> 40 </h4>
-								</li>
-							</ul>
-
-							<div class="progress">
-								<div class="inprogress" id="inProgressCircleStatus"> </div>
-								<div class="complete" id="completeCircleStatus"> </div>
-							</div>
-						</div>
-					</div> <!-- content -->
-
-				</div> <!-- Tasks panel -->
-
+        <table class="table" id="js-datatable">
+          <thead>
+             <tr>
+               <th>Well id</th>
+               <th>Expenses</th>
+               <th>Mass</th>
+               <th>Oil</th>
+               <th>Price</th>
+               <th>Square</th>
+               <th>Total</th>
+               <th>Value</th>
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>47</td>
+              <td>3175600</td>
+              <td>897229400</td>
+              <td>323</td>
+              <td>3723502010000</td>
+              <td>32300</td>
+              <td>1360</td>
+              <td>8066333400</td>
+            </tr>
+            <tr>
+              <td class="heatmap-stable">95</td>
+              <td>2799550</td>
+              <td>248540000</td>
+              <td>170</td>
+              <td>1031441000000</td>
+              <td>17000</td>
+              <td>1199</td>
+              <td>4244310450</td>
+            </tr>
+            <tr>
+              <td class="heatmap-positive">126</td>
+              <td>41169250</td>
+              <td>65369021400</td>
+              <td>2757</td>
+              <td>271281438810000</td>
+              <td>275700</td>
+              <td>17633</td>
+              <td>68836961750</td>
+            </tr>
+            <tr>
+              <td class="heatmap-negative">164</td>
+              <td>36182310</td>
+              <td>87404758400</td>
+              <td>3188</td>
+              <td>362729747360000</td>
+              <td>318800</td>
+              <td>16238</td>
+              <td>79609621690</td>
+            </tr>
+            <tr>
+              <td class="heatmap-negative">176</td>
+              <td>2741290</td>
+              <td>372070400</td>
+              <td>208</td>
+              <td>1544092160000</td>
+              <td>20800  </td>
+              <td>1174</td>
+              <td>5193722710</td>
+            </tr>
+          </tbody>
+        </table>
 			</div>
 
 		</section>
@@ -203,6 +211,58 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <script type="text/javascript">
+    function clean_formatted_data(str) {
+      return parseFloat(str.replace(/([%,$,\,])+/g,''));
+    }
+
+    function col_to_array(tbl_col,target) {
+      // Returns column n (zero indexed) in table id target as an array
+
+      var colArray = $('#'+target+' td:nth-child('+tbl_col+')').map(function(){
+        return clean_formatted_data( $(this).text() );
+      }).get();
+
+      return colArray;
+    }
+
+    //------ new schtuff ------------------------//
+
+    function get_pos_of_max(col_data) { return $.inArray( Math.max.apply(Math,col_data), col_data ) }
+
+    function generate_opacities(col_data, max) {
+      var opacity_array = [];
+      var increment = max/(col_data.length);
+
+      for(i=col_data.length; i >= 1; i--) {
+        opacity_array.push(i*increment/100);
+      }
+
+      return opacity_array;
+    }
+
+
+    function process_col_best_performing(tbl_col, target) {
+      var col_data = col_to_array(tbl_col,target);
+      var opacity_array = generate_opacities(col_data, 50);
+      var row_count = col_data.length;
+
+      for (var i=1; i <= row_count; i++) {
+        $('#'+target+' tr:nth-child('+(get_pos_of_max(col_data)+1)+') td:nth-child('+tbl_col+')').css('background','rgba(0,0,255,'+opacity_array[0]+')');
+        col_data[get_pos_of_max(col_data)] = null;
+        opacity_array.splice(0,1);
+
+      }
+    }
+
+    process_col_best_performing(2,'js-datatable');
+    process_col_best_performing(3,'js-datatable');
+    process_col_best_performing(4,'js-datatable');
+    process_col_best_performing(5,'js-datatable');
+    process_col_best_performing(6,'js-datatable');
+    process_col_best_performing(7,'js-datatable');
+    process_col_best_performing(8,'js-datatable');
+  </script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>

@@ -22,6 +22,10 @@ app.get('/wellss', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'wellss.html'));
 });
 
+app.get('/raw', function(req, res) {
+  res.sendFile(path.join(__dirname, '', 'raw.html'));
+});
+
 app.get('/well-data', function(req, res) {
 
     res.sendFile(path.join(__dirname, 'json', 'wells.json'));
