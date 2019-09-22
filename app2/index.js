@@ -19,11 +19,12 @@ app.get('/wells', function(req, res) {
 });
 
 app.get('/well-data', function(req, res) {
-<<<<<<< HEAD
-    res.sendFile(path.join(__dirname, 'json', 'result_example.json'));
-=======
+
     res.sendFile(path.join(__dirname, 'json', 'wells.json'));
->>>>>>> e58f3750a26ef0d2abc5089936f91028dfac8f33
+
+
+    res.sendFile(path.join(__dirname, 'json', 'wells.json'));
+
 });
 
 app.listen(8008);
