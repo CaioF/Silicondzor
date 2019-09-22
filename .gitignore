@@ -1,5 +1,8 @@
 /jupyter_notebooks/.ipynb_checkpoints
 *.DS_Store*
 /jupyter_notebooks/.ipynb
+data/train_clean.json
 # dependencies
 /app-sillicondzor/node_modules
+data/train_clean_sorted.json
+

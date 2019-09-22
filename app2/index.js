@@ -26,8 +26,8 @@ app.get('/raw', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'raw.html'));
 });
 
-app.get('/get-data', function(req, res) {
-    res.sendFile(path.join(__dirname, 'json', 'result_example.json'));
+app.get('/distribution', function(req, res) {
+  res.sendFile(path.join(__dirname, '', 'distribution.html'));
 });
 
 app.listen(8008);
