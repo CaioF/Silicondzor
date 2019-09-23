@@ -1,24 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Form from './components/form';
+import GraphLabel from './components/graphlabel';
+import AnalysisMap from './components/analysismap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div className="App">
+        <ul>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/info">INFO</Link></li>
+          <li><Link to="/analytic">Analytic</Link></li>
+        </ul>
+        <header className="App-header">
+          <img className="logo-header" src={"logo-big.jpg"} alt="logo" />
+        </header>
+
+        <hr />
+
+        <Route exact path="/" component={Home} />
+        <Route path="/info" component={Info} />
+        <Route path="/analytic" component={Analytic} />
+      </div>
+    </Router>
+  );
+}
+
+
+function Home() {
+  return (
+    <div className="home_container">
+    </div>
+  );
+}
+
+function Info() {
+  return (
+    <div>
+    </div>
+  );
+}
+
+
+function Analytic() {
+  return (
+    <div>
+      <AnalysisMap />
     </div>
   );
 }
