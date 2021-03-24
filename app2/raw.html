@@ -38,7 +38,7 @@
       google.charts.setOnLoadCallback(getData);
       function getData() {
         jQuery.ajax({
-            url: "http://localhost:8008/well-data",
+            url: "/well-data",
             type: "GET",
             dataType: "json",
             async: false,
@@ -122,8 +122,8 @@
 				<h1 class="title"> Oily Manager Dashboard </h1>
 				<nav class="app-nav">
 					<ul class="menu">
-						<li> <a href="http://localhost:8008/wells.html"> Reservoir Overview </a> </li>
-						<li> <a href="http://localhost:8008/wellss.html"> Financial Overview </a> </li>
+						<li> <a href="/wells.html"> Reservoir Overview </a> </li>
+						<li> <a href="/financial.html"> Financial Overview </a> </li>
 						<li class="selected"> <a> Raw Predictions </a> </li>
 					</ul>
 				</nav>
