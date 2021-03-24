@@ -39,5 +39,5 @@ app.get('/well-data', function(req, res) {
 
 });
 
-app.listen(8008);
-console.log("Server is running on port 8008, set to your local IP");
+app.listen(process.env.PORT || 8008);
+console.log("Server is running on port process.env.PORT || 8008, set to your local IP");
