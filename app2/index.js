@@ -10,10 +10,6 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'index.html'));
 });
 
-app.get('/analysis', function(req, res) {
-  res.sendFile(path.join(__dirname, '', 'financial.html'));
-});
-
 app.get('/wells', function(req, res) {
   res.sendFile(path.join(__dirname, '', 'wells.html'));
 });
