@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/analysis', function(req, res) {
-  res.sendFile(path.join(__dirname, '', 'analysis.html'));
+  res.sendFile(path.join(__dirname, '', 'financial.html'));
 });
 
 app.get('/wells', function(req, res) {

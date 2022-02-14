@@ -1,6 +1,6 @@
 # Silicondzor
 
-РПЗ команды Silicondzor на хакатоне CET-MIPT Hack, v.0.0
+РПЗ команды Silicondzor на хакатоне CET-MIPT Hack, v.1.0
 
 ## Участники
 
